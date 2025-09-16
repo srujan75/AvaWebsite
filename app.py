@@ -4,7 +4,7 @@ import psycopg2, os
 app = Flask(__name__)
 
 # Render provides DATABASE_URL as env var
-DATABASE_URL = os.getenv("DATABASE_URL")
+DATABASE_URL = os.getenv("postgresql://avawebsitedb_user:d4t5vJ63qDcXrpnaXvES5w3jzhxj3DdU@dpg-d31dm38dl3ps73eboku0-a/avawebsitedb")
 
 def get_conn():
     return psycopg2.connect(DATABASE_URL, sslmode="require")
